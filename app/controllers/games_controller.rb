@@ -8,4 +8,9 @@ class GamesController < ApplicationController
     letter = @name.split('')
     @first_letter = letter[0]
   end
+
+  def number
+    @correct_number = 17
+    @user_number = params[:number].to_i
+  end
 end
