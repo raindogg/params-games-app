@@ -1,0 +1,12 @@
+<h1>I want to play a game.</h1>
+<h2>Put a number in this form and I'll tell you if you're too high, too low, or correct.</h2>
+
+<%= form_tag '/form_result', method: :get do %>
+  <div>
+    <%= label_tag :guess %>
+    <%= text_field_tag :guess %>
+  </div>
+  <div>
+    <%= submit_tag 'Guess!' %> 
+  </div>
+<% end %>

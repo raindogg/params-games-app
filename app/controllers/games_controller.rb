@@ -58,5 +58,23 @@ class GamesController < ApplicationController
       @message = 'You win!'
     end
   end
+
+  def form_number
+  
+  end
+
+  def form_number_result
+    @correct_number = 17
+    @user_number = params[:guess].to_i
+    if @user_number < 1 || @user_number > 100 
+      @message = 'FORBIDDEN.'
+    elsif @user_number > @correct_number
+      @message = 'Your guess is too high.'
+    elsif @user_number < @correct_number
+      @message = 'Your guess is too low.'
+    elsif @user_number == @correct_number
+      @message = 'You win!'
+    end
+  end
 end
 
