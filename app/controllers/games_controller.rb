@@ -38,6 +38,13 @@ class GamesController < ApplicationController
     end
   end
 
+  def button
+    @times = params[:clicks].to_i
+    @once_more = @times + 1
+    @url = "http://localhost:3000/button_presser?clicks=" + @once_more.to_s
+    @message = 'You have clicked it ' + @times.to_s + " times."
+  end
+
   def url_number
     @correct_number = 17
     @user_number = params[:guess].to_i
