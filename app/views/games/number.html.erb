@@ -1,9 +1,1 @@
-<h1>I want to play a game.</h1>
-
-<% if @user_number > @correct_number %>
-  <h2>Your guess is too high.</h2>
-<% elsif @user_number < @correct_number %>
-  <h2>Your guess is too low.</h2>
-<% elsif @user_number == @correct_number %> 
-  <h2>You win!</h2>
-<% end %>
+<h1><%= @message %></h1>
